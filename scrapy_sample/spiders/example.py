@@ -4,10 +4,14 @@ import scrapy
 
 class ExampleSpider(scrapy.Spider):
     name = "example"
-    allowed_domains = ["example.com"]
     start_urls = (
-        'http://www.example.com/',
+        "http://www.cnn.co.jp/",
+        "https://www.yahoo.com/",
+        "http://www.reuters.com/"
     )
 
     def parse(self, response):
-        pass
+        url   = response.url
+        title = response.xpath("//title/text()").extract_first()
+
+        yield {"url": url, "title": title}
