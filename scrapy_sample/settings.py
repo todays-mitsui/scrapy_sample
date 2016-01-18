@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from datetime import datetime
+
 # Scrapy settings for scrapy_sample project
 #
 # For simplicity, this file contains only settings considered important or
@@ -83,3 +85,6 @@ NEWSPIDER_MODULE = 'scrapy_sample.spiders'
 #HTTPCACHE_DIR='httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES=[]
 #HTTPCACHE_STORAGE='scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+LOG_FILE   = "logs/snapshot-%s.log" % datetime.now().strftime("%Y-%m-%d")
+LOG_LEVEL  = "INFO"
