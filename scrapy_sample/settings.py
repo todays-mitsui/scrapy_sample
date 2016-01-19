@@ -88,3 +88,5 @@ NEWSPIDER_MODULE = 'scrapy_sample.spiders'
 
 LOG_FILE   = "logs/snapshot-%s.log" % datetime.now().strftime("%Y-%m-%d")
 LOG_LEVEL  = "INFO"
+
+START_URLS = "start_urls.txt"
